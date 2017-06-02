@@ -10,6 +10,7 @@
 		A50EE82D1EE15C7D002BA63F /* DrawingViewConvertor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EE82C1EE15C7D002BA63F /* DrawingViewConvertor.swift */; };
 		A50EE82F1EE15DCC002BA63F /* UIImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EE82E1EE15DCC002BA63F /* UIImageResize.swift */; };
 		A50EE8311EE160FC002BA63F /* UIImagePixels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EE8301EE160FC002BA63F /* UIImagePixels.swift */; };
+		A50EE8331EE19EAD002BA63F /* PredictionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EE8321EE19EAD002BA63F /* PredictionService.swift */; };
 		A533EF4D1EE157F100746729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533EF4C1EE157F100746729 /* AppDelegate.swift */; };
 		A533EF4F1EE157F100746729 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A533EF4E1EE157F100746729 /* ViewController.swift */; };
 		A533EF521EE157F100746729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A533EF501EE157F100746729 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		A50EE82C1EE15C7D002BA63F /* DrawingViewConvertor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingViewConvertor.swift; sourceTree = "<group>"; };
 		A50EE82E1EE15DCC002BA63F /* UIImageResize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageResize.swift; sourceTree = "<group>"; };
 		A50EE8301EE160FC002BA63F /* UIImagePixels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImagePixels.swift; sourceTree = "<group>"; };
+		A50EE8321EE19EAD002BA63F /* PredictionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionService.swift; sourceTree = "<group>"; };
 		A533EF491EE157F100746729 /* draw-recognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "draw-recognition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A533EF4C1EE157F100746729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A533EF4E1EE157F100746729 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				A50EE82C1EE15C7D002BA63F /* DrawingViewConvertor.swift */,
 				A50EE82E1EE15DCC002BA63F /* UIImageResize.swift */,
 				A50EE8301EE160FC002BA63F /* UIImagePixels.swift */,
+				A50EE8321EE19EAD002BA63F /* PredictionService.swift */,
 				A533EF501EE157F100746729 /* Main.storyboard */,
 				A533EF531EE157F100746729 /* Assets.xcassets */,
 				A533EF551EE157F100746729 /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				A50EE8311EE160FC002BA63F /* UIImagePixels.swift in Sources */,
 				A533EF5F1EE158CA00746729 /* DrawingView.swift in Sources */,
+				A50EE8331EE19EAD002BA63F /* PredictionService.swift in Sources */,
 				A533EF4F1EE157F100746729 /* ViewController.swift in Sources */,
 				A50EE82D1EE15C7D002BA63F /* DrawingViewConvertor.swift in Sources */,
 				A50EE82F1EE15DCC002BA63F /* UIImageResize.swift in Sources */,

@@ -34,6 +34,11 @@ class DrawingView: UIView {
         path.lineWidth=lineWidth
     }
     
+    func clear() {
+        path.removeAllPoints()
+        setNeedsDisplay()
+    }
+    
     @objc func pan(panGestureRecognizer:UIPanGestureRecognizer) -> Void {
         let currentPoint=panGestureRecognizer.location(in: self)
         let midPoint=self.midPoint(p0: previousPoint, p1: currentPoint)
