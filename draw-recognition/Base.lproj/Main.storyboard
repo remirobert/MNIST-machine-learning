@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="heQ-di-Ysm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="draw_recognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lat-1x-OA3" customClass="DrawingView" customModule="draw_recognition" customModuleProvider="target">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lat-1x-OA3" secondAttribute="height" multiplier="1:1" id="8Jx-jx-wx2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yE-Bp-LhX">
+                                <rect key="frame" x="36" y="603" width="303" height="44"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EiQ-Ap-ixo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="predict">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="predictDrawing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5q-5a-SyN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmy-lo-Pbz">
+                                <rect key="frame" x="0.0" y="64" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="Ryh-Uk-2Sg"/>
+                                    <constraint firstAttribute="height" constant="28" id="VYe-DU-2RC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94391764789999999" green="0.94391764789999999" blue="0.94391764789999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3yE-Bp-LhX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="2K4-3h-5hU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lat-1x-OA3" secondAttribute="trailing" constant="52" id="5Rq-hs-Fqk"/>
+                            <constraint firstItem="kmy-lo-Pbz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="993-LB-vEn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3yE-Bp-LhX" secondAttribute="bottom" constant="20" id="FLW-Be-P4f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3yE-Bp-LhX" secondAttribute="trailing" constant="20" id="Pgx-ti-KMS"/>
+                            <constraint firstItem="lat-1x-OA3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jWq-uj-9aW"/>
+                            <constraint firstItem="lat-1x-OA3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="pHe-dA-kCD"/>
+                            <constraint firstItem="kmy-lo-Pbz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ziZ-s6-wIc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vh6-NN-4WP"/>
+                    <connections>
+                        <outlet property="buttonPrecition" destination="3yE-Bp-LhX" id="ioh-eQ-3Nl"/>
+                        <outlet property="drawingView" destination="lat-1x-OA3" id="WDk-qo-qzJ"/>
+                        <outlet property="imageViewPreview" destination="kmy-lo-Pbz" id="t2X-ze-HLg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oPU-IQ-EkW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="heQ-di-Ysm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3XX-kO-rFF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="keq-hf-Yoq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpt-Zo-jRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="-36.431784107946029"/>
+        </scene>
+    </scenes>
+</document>
