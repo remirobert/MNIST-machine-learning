@@ -15,12 +15,15 @@ def save_model(model):
     pickle.dump(model, gzip.open(model_filename, "wb"))
     print("model saved")
 
-def train_evaluate_model():
+def train_data():
     train = pd.read_csv("train.csv")
     features = train.columns[1:]
     X = train[features]
     y = train['label']
-    X_train, X_test, y_train, y_test = model_selection.train_test_split(X/255.,y,test_size=0.25,random_state=0)
+    return model_selection.train_test_split(X / 255., y, test_size=0.25, random_state=0)
+
+def train_evaluate_model():
+    X_train, X_test, y_train, y_test = train_data()
     model = RandomForestClassifier(n_estimators=50, n_jobs=-1)
     model.fit(X_train, y_train)
 
@@ -29,11 +32,7 @@ def train_evaluate_model():
     print("accuracy : ", acc_rf)
 
 def train_final_model():
-    train = pd.read_csv("train.csv")
-    features = train.columns[1:]
-    X = train[features]
-    y = train['label']
-    X_train, X_test, y_train, y_test = model_selection.train_test_split(X/255.,y,test_size=0,random_state=0)
+    X_train, X_test, y_train, y_test = train_data()
     model = RandomForestClassifier(n_estimators=50, n_jobs=-1)
     model.fit(X_train, y_train)
     save_model(model)

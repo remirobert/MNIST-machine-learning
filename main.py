@@ -18,7 +18,8 @@ def load_model():
 def predict(model, data):
     y_pred_rf = model.predict(data)
     print("prediction : ", y_pred_rf)
-    return y_pred_rf
+    print(type(int(y_pred_rf[0])))
+    return y_pred_rf[0]
 
 model = load_model()
 input_data = read_intput_data()
